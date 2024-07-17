@@ -18,15 +18,15 @@ const App = () => {
     }
 
 	return (
-        <div className='app'>
+        <div id="main" className='app'>
             <div>
                 <h1>Our Menu</h1>
                 <hr/>
             </div>
 			<ul>
                 <li onClick={()=>handleClick("all")}>All</li>
-                {uniqueCategories.map((category) => (
-                    <li key={category} onClick={()=>handleClick(category)}>{category[0].toUpperCase() + category.slice(1)}</li>
+                {uniqueCategories.map((category,idx) => (
+                    <li id={`filter-btn-${idx+1}`} key={category} onClick={()=>handleClick(category)}>{category[0].toUpperCase() + category.slice(1)}</li>
                 ))}
 			</ul>
             <div className='menu-grid'>
