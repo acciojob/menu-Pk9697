@@ -31,7 +31,7 @@ const App = () => {
 			</ul>
             <div className='menu-grid'>
                 {menus.map((menu) => (
-                    <div key={menu.id} className='item-grid'>
+                    <div data-test-id={`menu-item-${menu.category}`} key={menu.id} className='item-grid'>
                         <div className='item-image'>
                             <img src='http://unsplash.it/400/300?random&gravity=center' />
                         </div>
